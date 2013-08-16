@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+ 
+{% block title %}{{pocket.item}}{% endblock %}
+ 
+{% block content %}
+<item>
+    <header>
+        <h1> {{pocket.item}} </h1>
+        <p>
+            Posted on date
+            <time datetime="{{pocket.created|date:"c"}}">
+            {{pocket.date}}
+            </time>
+        </p>
+    </header>
+    <p class="description">
+        {{pocket.comment}}
+    </p>
+</article>
+{% endblock %}
+
+
